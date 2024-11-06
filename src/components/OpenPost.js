@@ -4,7 +4,6 @@ import Markdown from "react-markdown";
 import { useNavigate } from "react-router-dom";
 
 const OpenPost = ({ data }) => {
-  // console.log(data);
   const { id } = useParams();
   const navigate = useNavigate();
   const post = data.find((item) => item.id === id);

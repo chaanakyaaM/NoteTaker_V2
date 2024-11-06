@@ -18,7 +18,7 @@ export default function Navbar({ logo, add, setadd, len, signin }) {
 
   return (
     <div className="navbar">
-      <div className="testing">
+      <div className="logo-search-container">
         <NavLink to="/">
           <div className="logo">{logo}</div>
         </NavLink>

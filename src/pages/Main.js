@@ -3,7 +3,7 @@ import '../App.css';
 import { useEffect,useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Addblog from '../pages/Addblog';
+import Addblog from './Addblog';
 import { off ,remove} from 'firebase/database';
 import OpenPost from '../components/OpenPost';
 import SearchList from '../components/SearchList';
@@ -11,8 +11,7 @@ import { UserButton} from '@clerk/clerk-react'
 import { useUser } from '@clerk/clerk-react'
 import Post from '../components/Post'
 import firebaseConfig from "../config/firebaseconfig";
-// import firebaseConfig from '../config/firebaseconfig';
-import PageNotFound from '../pages/PageNotFound'
+import PageNotFound from './PageNotFound'
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set,onValue } from "firebase/database";
 import { toast } from 'react-toastify';
@@ -57,6 +56,7 @@ export default function () {
   };
 
     useEffect(() => {
+      // Display data with the userid if exists
       if (loading && user) {  
         setnotesloading(true)
         const starCountRef = ref(database, 'users/' + user.id);
@@ -69,7 +69,6 @@ export default function () {
             // Convert the data object to an array
             const postsArray = Object.keys(data).map((key) => data[key]);
             setPostsData([ ...postsArray]);
-            // console.log(postsData)
           } else {
             
             setPostsData([
@@ -105,7 +104,6 @@ export default function () {
       })
       .catch((error) => {
         toast.error("Error deleting post:", error);
-        // alert("Could not delete the post. Please try again.");
       });
 }
     
