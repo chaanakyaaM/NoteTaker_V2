@@ -4,7 +4,7 @@ import {
   SignedOut
 } from "@clerk/clerk-react";
 import Home from "./pages/Home";
-import Sign from "./pages/Main";
+import Main from "./pages/Main";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Home />
       </SignedOut>
       <SignedIn>
-        <Sign />
+        <Main />
       </SignedIn>
     </>
   );

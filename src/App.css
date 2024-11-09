@@ -272,6 +272,8 @@ a {
   color: var(--white-color);
   cursor: pointer;
   transition-duration: 1s;
+  border: 2px solid black;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 .edit-buttons {
@@ -620,8 +622,13 @@ a {
 }
 
 @media (max-width: 480px) {
+  .navbar{
+    padding: 5px;
+  }
   .links {
     flex-direction: row;
+    gap: 0px;
+    justify-content: space-between;
   }
   .search {
     height: 40px;
@@ -676,8 +683,11 @@ a {
     font-size: 25px;
   }
   .buttons,.len{
-    font-size: 13px;
+    font-size: 14px;
     width: 100px;
+  }
+  .len{
+    width:fit-content;
   }
 }
 
@@ -727,5 +737,8 @@ a {
     flex-direction: row;
     gap: 10px;
     width: 100%;
+  }
+  .main-container{
+    margin: 50px;
   }
 }
