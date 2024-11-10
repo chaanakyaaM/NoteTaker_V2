@@ -313,7 +313,7 @@ a {
 }
 .open-post {
   height: fit-content;
-  margin-top: 110px;
+  margin-top: 50px;
 }
 .back {
   background-color: var(--primary-color);
@@ -336,6 +336,8 @@ a {
   margin: auto;
   padding: 10px;
   border: 3px solid var(--primary-color);
+  margin-top: 25px;
+  border-radius: 5px;
 }
 .selector {
   display: flex;
@@ -623,11 +625,10 @@ a {
 
 @media (max-width: 480px) {
   .navbar{
-    padding: 5px;
+    padding: 10px 5px;
   }
   .links {
     flex-direction: row;
-    gap: 0px;
     justify-content: space-between;
   }
   .search {
@@ -636,9 +637,6 @@ a {
 
   .postlist {
     margin-top: 180px;
-  }
-  .open-post {
-    margin-top: 200px;
   }
 
   .search-img {
@@ -689,6 +687,7 @@ a {
   .len{
     width:fit-content;
   }
+
 }
 
 @media (max-width: 983px) {
@@ -709,11 +708,11 @@ a {
     width: calc(100% - 40px);
   }
   .open-post {
-    margin-top: 200px;
+    margin-top: 100px;
   }
   .back {
     width: 10px;
-    top: 155px;
+    top: 115px;
   }
   .postlist {
     margin-top: 170px;
