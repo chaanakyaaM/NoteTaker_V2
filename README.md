@@ -1,6 +1,6 @@
 # Follow the steps given below to set up this project locally:
 ### Step 1:
-- Fork the Repo and star the repo.
+- Fork the Repo and star it.
   
 ### Step 2:
 - Clone the forked repo to your local machine using `git clone` command.
